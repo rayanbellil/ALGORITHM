@@ -1,0 +1,33 @@
+ALGORITHM exo_gomycode
+VAR
+    ch: character;
+  char_count, word_count, vowel_count: integer;
+  vowels: string;
+BEGIN
+ char_count ← 0
+  word_count ← 1
+  vowel_count ← 0
+  vowels ← "aeiouAEIOU"
+
+  Display "Enter the sentence character by character. End with a dot (.)"
+
+  Repeat
+    Input ch
+    char_count ← char_count + 1
+
+    If ch ∈ vowels Then
+      vowel_count ← vowel_count + 1
+    EndIf
+
+    If ch = ' ' Then
+      word_count ← word_count + 1
+    EndIf
+
+  Until ch = '.'
+
+  Display "Characters: ", char_count
+  Display "Words: ", word_count
+  Display "Vowels: ", vowel_count
+
+    
+END
